@@ -56,5 +56,6 @@ WORKDIR /
 RUN pip install plotly argparse gcodeparser 
 RUN pip install numpy pandas pyserial serialstruct
 RUN pip install matplotlib mgen
-WORKDIR /am-robot
+#WORKDIR /am-robot
+WORKDIR /AM-robot
 #CMD pip install -e . && python3 src/am_robot/main.py
