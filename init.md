@@ -13,7 +13,7 @@ docker build -t franka-test .
 ```
 
 
-To run docker container
+To run docker container for am-robot
 ```
 docker run -it \
     --mount type=bind,source=$(pwd)/am-robot,target=/am-robot \
@@ -21,9 +21,16 @@ docker run -it \
     --device=/dev/ttyUSB0 \
     franka-test:latest 
 ```
+To run docker container for AM-robot
+```
+docker run -it \
+    --mount type=bind,source=$(pwd)/AM-robot,target=/AM-robot \
+    --net=host --privileged \
+    --device=/dev/ttyUSB0 \
+    franka-test:latest 
+```
 
-
-To build+run in single command:
+To build+run in single command for am-robot:
 ```
 docker run -it \
     --mount type=bind,source=$(pwd)/am-robot,target=/am-robot \
@@ -31,3 +38,10 @@ docker run -it \
     --device=/dev/ttyUSB0 \
     $(docker build -q .)
 ```
+
+To build+run in single command for AM-robot:
+docker run -it \
+    --mount type=bind,source=$(pwd)/AM-robot,target=/AM-robot \
+    --net=host --privileged \
+    --device=/dev/ttyUSB0 \
+    $(docker build -q .)
