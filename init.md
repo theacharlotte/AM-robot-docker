@@ -1,3 +1,9 @@
+To perform clean init of Brusevolds project:
+```
+git clone --recurse https://github.com/theacharlotte/AM-robot.git
+cd AM-robot
+```
+
 To perform clean init of Johnsgaards project:
 ```
 git clone --recurse https://github.com/alejontnu/am-robot
