@@ -1,4 +1,4 @@
-To perform clean init of project:
+To perform clean init of Johnsgaards project:
 ```
 git clone --recurse https://github.com/alejontnu/am-robot
 cd am-robot
